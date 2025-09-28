@@ -44,7 +44,7 @@ document.getElementById('bookingForm').addEventListener('submit', async function
 
     try {
         // This will be replaced with actual Google Apps Script URL
-        const response = await fetch('https://script.google.com/macros/s/AKfycbyNrtQrSe7PLdY82kq6H_liLzK3ytLiyjMPswlU3b54um05uCytVLNqNN0ATx4_KTR10Q/exec', {
+        const response = await fetch('https://script.google.com/macros/s/AKfycby1EmcX-3CBTvPU3oKZ2wHezSQjQ2aiH4lSfRg_hSKgBUOsZLW82DFBO9-jkSPxR-hbdA/exec', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
@@ -69,3 +69,4 @@ document.getElementById('bookingForm').addEventListener('submit', async function
         loading.style.display = 'none';
     }
 });
+
