@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gran Station - จองคิวล้างรถ</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Gran Station</h1>
+            <p>จองคิวล้างรถออนไลน์</p>
+        </div>
+
+        <div class="form-container">
+            <form id="bookingForm">
+                <div class="form-group">
+                    <label for="customerName">ประเภทรถเเละทะเบียนรถ *</label>
+                    <input type="text" id="customerName" name="customerName" required
+                           placeholder="เช่น รถเก๋งเล็ก ทะเบียน กข 1234">
+                </div>
+
+                <div class="form-group">
+                    <label for="phoneNumber">เบอร์โทรศัพท์ *</label>
+                    <input type="tel" id="phoneNumber" name="phoneNumber" required
+                           placeholder="08X-XXX-XXXX" pattern="[0-9]{10}">
+                </div>
+
+                <div class="form-group">
+                    <label for="serviceDate">วันที่ต้องการใช้บริการ *</label>
+                    <input type="date" id="serviceDate" name="serviceDate" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="serviceTime">เวลาที่ต้องการใช้บริการ *</label>
+                    <select id="serviceTime" name="serviceTime" required>
+                        <option value="">เลือกเวลา</option>
+                        <option value="08:00">08:00 น.</option>
+                        <option value="09:00">09:00 น.</option>
+                        <option value="10:00">10:00 น.</option>
+                        <option value="11:00">11:00 น.</option>
+                        <option value="12:00">12:00 น.</option>
+                        <option value="13:00">13:00 น.</option>
+                        <option value="14:00">14:00 น.</option>
+                        <option value="15:00">15:00 น.</option>
+                        <option value="16:00">16:00 น.</option>
+                        <option value="17:00">17:00 น.</option>
+                        <option value="18:00">18:00 น.</option>
+                    </select>
+                </div>
+
+                <div class="car-size-group">
+                    <label>ขนาดรถ *</label>
+                    <div class="car-size-options">
+                        <div class="car-size-option">
+                            <input type="radio" id="sizeS" name="carSize" value="Size S" required>
+                            <label for="sizeS">
+                                <div class="size-title">Size S (Small)</div>
+                                <div class="size-description">รถเก๋งเล็ก เช่น Honda Jazz, Suzuki Swift, Nissan Tiida, Nissan Almera และรถมินิอื่นๆ</div>
+                            </label>
+                        </div>
+
+                        <div class="car-size-option">
+                            <input type="radio" id="sizeM" name="carSize" value="Size M" required>
+                            <label for="sizeM">
+                                <div class="size-title">Size M (Medium)</div>
+                                <div class="size-description">รถขนาดกลางและกระบะซิงเกิ้ลแค็บ เช่น CRV, HRV, CHR, Toyota Cross, รถกระบะซิงเกิ้ลแค็บ, รถไฟฟ้า (Deepal 505, 506, 507)</div>
+                            </label>
+                        </div>
+
+                        <div class="car-size-option">
+                            <input type="radio" id="sizeL" name="carSize" value="Size L" required>
+                            <label for="sizeL">
+                                <div class="size-title">Size L (Large)</div>
+                                <div class="size-description">รถ SUV ใหญ่และรถ 7 ที่นั่ง เช่น Pajero, Fortuner, กระบะ 4 ประตู, Kia Carnival, Mitsubishi Xforce, Toyota Innova</div>
+                            </label>
+                        </div>
+
+                        <div class="car-size-option">
+                            <input type="radio" id="sizeXL" name="carSize" value="Size XL" required>
+                            <label for="sizeXL">
+                                <div class="size-title">Size XL (Extra Large)</div>
+                                <div class="size-description">รถตู้ เช่น Toyota Alphard, Toyota Commuter, Hyundai H1, รถตู้ Kia</div>
+                            </label>
+                        </div>
+                    </div>
+                </div>
+
+                <button type="submit" class="submit-btn" id="submitBtn">
+                    จองคิวล้างรถ
+                </button>
+
+                <div class="loading" id="loading">
+                    <div class="loading-spinner"></div>
+                    <p>กำลังส่งข้อมูล...</p>
+                </div>
+
+                <div class="success-message" id="successMessage">
+                    ✅ ทางร้านรับการจองคิวของท่านเรียบร้อยแล้ว!
+                </div>
+
+                <div class="error-message" id="errorMessage">
+                    ❌ เกิดข้อผิดพลาด กรุณาลองใหม่อีกครั้ง
+                </div>
+            </form>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
