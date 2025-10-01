@@ -45,8 +45,7 @@ document.getElementById('bookingForm').addEventListener('submit', async function
     try {
         // รองรับหลาย URL (เลือกอันใดอันหนึ่ง)
         //const url = 'https://script.google.com/macros/s/AKfycbzp891sx34BwvBtZhwu76y8fBxCw8J2UvqdMnv7O8-32S0v-uy0RQGKsWY_aqBbyR-sjQ/exec';
-        // const url = 'https://script.google.com/macros/s/AKfycbw2lseQDnaim1IHepjfxrXG0NwzpPhcIuiRTeDKd6JKOzKj8a_J5OLZv2R7MlkOPq3duw/exec';
-        const url = 'https://script.google.com/macros/s/AKfycbyOsVl_GZMzL6PU0YDjNe5Lt7LOn8rmHfhGgSXsK64-aziVt8cRbMJGyjwn8RQ5bMGR2A/exec';
+        const url = 'https://script.google.com/macros/s/AKfycbw2lseQDnaim1IHepjfxrXG0NwzpPhcIuiRTeDKd6JKOzKj8a_J5OLZv2R7MlkOPq3duw/exec';
         const response = await fetch(url, {
             method: 'POST',
             headers: {
@@ -72,5 +71,6 @@ document.getElementById('bookingForm').addEventListener('submit', async function
         loading.style.display = 'none';
     }
 });
+
 
 
